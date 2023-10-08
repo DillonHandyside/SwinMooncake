@@ -9,12 +9,12 @@ public class CheckSeismicActivityAtLocation : MonoBehaviour
 
         int collisionCount = 0;
 
-        List<ShallowMoonquake> listOfShallowMoonquakes = FindObjectOfType<ShallowMoonquakeVisualiser>().earthquakeDataList;
+        List<ShallowMoonquakeVisualiser.ShallowMoonquake> listOfShallowMoonquakes = FindObjectOfType<ShallowMoonquakeVisualiser>().earthquakeDataList;
         // Calculate vector3 point within shallowmoonquake latitude, longitude, magnitude.
 
         foreach (var data in listOfShallowMoonquakes)
         {
-            Vector3 moonquake = MoonUtils.LatLongToPosition(data.Latitude, data.Longitude, _moonRadius);
+            Vector3 moonquake = MoonUtils.LatLongToPosition(data.Latitude, data.Longitude, 10f);
 
             float collisionThreshold = 1.0f; // Adjust as needed
 

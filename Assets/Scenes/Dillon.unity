@@ -1143,7 +1143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560187019}
   - component: {fileID: 560187018}
-  - component: {fileID: 560187017}
+  - component: {fileID: 560187020}
   m_Layer: 0
   m_Name: Visualizers
   m_TagString: Untagged
@@ -1151,22 +1151,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &560187017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560187016}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: becc0c6b7f1ac3b4dbabdc417aef4d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moon: {fileID: 1055147219}
-  seismicObjectPrefab: {fileID: 3035666268450977858, guid: 997a13437b079eb44aaf29238861a79c, type: 3}
-  magnitudeScalar: 0.1
-  csvFilePath: Assets/Data/nakamura_1979_sm_locations.csv
 --- !u!114 &560187018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1180,9 +1164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moon: {fileID: 1055147219}
-  seismicActivityPrefab: {fileID: 3035666268450977858, guid: 30ed37c70adb1ac4892781601fcfdf41, type: 3}
+  shallowMoonquakePrefab: {fileID: 3035666268450977858, guid: 30ed37c70adb1ac4892781601fcfdf41, type: 3}
   magnitudeScalar: 0.1
   csvFile: {fileID: 4900000, guid: 3b54ec5d8a1773946b9516c7476afd84, type: 3}
+  earthquakeDataList: []
 --- !u!4 &560187019
 Transform:
   m_ObjectHideFlags: 0
@@ -1198,6 +1183,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560187020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560187016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3b08737bc6f464a8cd034460928e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moon: {fileID: 1055147219}
+  deepMoonquakePrefab: {fileID: 3035666268450977858, guid: 997a13437b079eb44aaf29238861a79c, type: 3}
+  magnitudeScalar: 0.1
+  csvFile: {fileID: 4900000, guid: 74a1a985ecca63a42bdca6c6e7411e2c, type: 3}
 --- !u!1 &602612014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2319,8 @@ GameObject:
   - component: {fileID: 1055147218}
   - component: {fileID: 1055147217}
   - component: {fileID: 1055147216}
+  - component: {fileID: 1055147220}
+  - component: {fileID: 1055147221}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -2403,6 +2406,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055147220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055147215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35202ab015c26a64781d38b2f7f349e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1055147221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055147215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a35df4dd41d9f4da851c894fedeab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1166425010
 GameObject:
   m_ObjectHideFlags: 0
