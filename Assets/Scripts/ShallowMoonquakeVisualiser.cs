@@ -67,7 +67,7 @@ public class ShallowMoonquakeVisualiser : MonoBehaviour
     
     void Start()
     {
-        List<ShallowMoonquake> earthquakeDataList = ParseCSV();
+        earthquakeDataList = ParseCSV();
         
         // Now you can use the earthquakeDataList for further processing or display in your Unity project
         foreach (var data in earthquakeDataList)
@@ -82,4 +82,6 @@ public class ShallowMoonquakeVisualiser : MonoBehaviour
             Debug.Log($"Index: {data.Index}, Latitude: {data.Latitude}, Longitude: {data.Longitude}, Magnitude: {data.Magnitude}, UTC DateTime: {data.UTCDateTime}, Type: {data.Type}");
         }
     }
+
+    public List<ShallowMoonquake> earthquakeDataList;
 }
