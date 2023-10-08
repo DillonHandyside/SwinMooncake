@@ -4,14 +4,14 @@ using System.IO;
 
 public class SeismicDataVisualiser : MonoBehaviour
 {
-    [SerializeField] private Transform moon; // Drag your Moon GameObject prefab here
-    [SerializeField] private GameObject seismicObjectPrefab; // Drag your seismic object prefab here
+    [SerializeField] private Transform moon;
+    [SerializeField] private GameObject seismicObjectPrefab;
     [SerializeField] private float magnitudeScalar;
     
     [Header("CSV")]
     [SerializeField] private string csvFilePath = "Assets/Data/nakamura_1979_sm_locations.csv"; 
 
-    private float _moonRadius = 10f; // Adjust this to your Moon's radius
+    private float _moonRadius = 10f;
 
     void Start()
     {
